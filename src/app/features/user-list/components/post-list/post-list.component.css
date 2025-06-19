@@ -1,0 +1,32 @@
+.posts-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+@media (max-width: 768px) {
+    .posts-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .posts-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+.post-card {
+    padding: 5px;
+    border: 1px solid;
+    text-align: center;
+}
+
+.post-title {
+    font-weight: 600;
+    padding: 5px;
+}
+
+.post-body {
+    padding: 5px;
+}

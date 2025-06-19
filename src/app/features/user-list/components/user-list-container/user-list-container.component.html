@@ -1,0 +1,12 @@
+<ng-container *ngIf="(posts$ | async) as posts">
+    <div *ngFor="let user of (users$ | async)">
+        <div class="user-details">
+            <app-user-component [user]="user"></app-user-component>
+            <button class="toggle-button" (click)="onToggle(user)">{{(selectedUserId$ | async) === user.id ? '-' : '+'}}</button>
+        </div>
+
+        <div *ngIf="(selectedUserId$ | async) === user.id as data">
+            <app-post-list-component [posts]="posts"></app-post-list-component>
+        </div>
+    </div>
+</ng-container>

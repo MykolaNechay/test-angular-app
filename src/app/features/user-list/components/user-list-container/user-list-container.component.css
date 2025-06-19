@@ -1,0 +1,12 @@
+.user-details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    margin: 5px 0;
+    border: 1px solid;
+}
+
+.toggle-button {
+    width: 30px;
+}
